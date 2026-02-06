@@ -1,29 +1,34 @@
 import Image from "next/image";
+// 画像を直接インポート（これで確実に表示されます）
+import residentialImg from "../app/assets/images/residential.png";
+import commercialImg from "../app/assets/images/commercial.jpg";
+import resortImg from "../app/assets/images/idx_img20.jpg";
+import industrialImg from "../app/assets/images/industrial.png";
 
 export default function Gallery() {
   const projects = [
     {
       title: "RESIDENTIAL",
       category: "住宅・別荘",
-      image: "/images/residential.png",
+      image: residentialImg,
       description: "自由度が高く、増築も簡単な新しい住まいの形。",
     },
     {
       title: "COMMERCIAL",
       category: "店舗・オフィス",
-      image: "/images/commercial.jpg",
+      image: commercialImg,
       description: "移設が可能で建築コストを抑えたビジネス拠点。",
     },
     {
       title: "HOTEL & RESORT",
       category: "宿泊施設",
-      image: "/images/idx_img20.jpg",
+      image: resortImg,
       description: "非日常を演出する、ユニークな宿泊体験。",
     },
     {
       title: "INDUSTRIAL",
       category: "倉庫・ガレージ",
-      image: "/images/industrial.png",
+      image: industrialImg,
       description: "堅牢な構造で大切な資産を守る保管スペース。",
     }
   ];
@@ -53,6 +58,7 @@ export default function Gallery() {
                 alt={`${project.title} - ${project.category}のコンテナハウス事例`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                placeholder="blur"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300" />
               

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+// 画像を直接インポート（これで確実に表示されます）
+import heroBg from "../app/assets/images/hero-bg-v2.png";
 
 export default function Hero() {
   return (
@@ -7,10 +9,11 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg-v2.png"
+          src={heroBg}
           alt="株式会社ジャカコンのモダンなコンテナハウス外観"
           fill
           className="object-cover brightness-[0.7]"
+          placeholder="blur"
           priority
         />
       </div>

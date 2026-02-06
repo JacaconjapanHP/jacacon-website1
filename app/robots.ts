@@ -1,10 +1,12 @@
 import { MetadataRoute } from 'next';
 
+// 静的エクスポート(output: 'export')のために必要
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.jacacon-k10.com'; // TODO: 本番ドメインに変更してください
-
+  // 本番URLに合わせて変更してください
+  const baseUrl = 'https://jacaconjapanhp.github.io/jacacon-renewal';
+  
   return {
     rules: {
       userAgent: '*',
