@@ -18,6 +18,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
-    // 将来的にページが増えたらここに追加
   ];
 }
